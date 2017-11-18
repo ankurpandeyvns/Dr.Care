@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "245492657195",
+    "firebase_url": "https://drcare-99f07.firebaseio.com",
+    "project_id": "drcare-99f07",
+    "storage_bucket": "drcare-99f07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245492657195:android:a5313a82b3e3a0b5",
+        "android_client_info": {
+          "package_name": "com.dtechterminal.drcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245492657195-pd3gltmup20qe5kodsru40crb2ikiueu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dtechterminal.drcare",
+            "certificate_hash": "462075bce28147bacd269d2d2bd831a36e18bfdd"
+          }
+        },
+        {
+          "client_id": "245492657195-qc80eigho5une59jb9h76p2ekrjsk273.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAILpMmuFtYr6McHHKbjt5UFEnuWFyuSqs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245492657195-qc80eigho5une59jb9h76p2ekrjsk273.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
