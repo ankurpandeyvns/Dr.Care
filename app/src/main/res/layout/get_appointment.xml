@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dtechterminal.drcare.GetAppointment">
+
+<TextView
+    android:id="@+id/Medical_History"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="33dp"
+    android:text="What is Your Medical History?"
+    android:textAlignment="center"
+    android:textSize="25sp"
+    app:layout_constraintBottom_toTopOf="@+id/MultilineText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/MultilineText"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="28dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:backgroundTint="@android:color/transparent"
+    android:hint=""
+    android:inputType="textMultiLine"
+    android:lines="2"
+    app:layout_constraintBottom_toTopOf="@+id/spinview"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/Medical_History" />
+
+<Spinner
+    android:id="@+id/spinner"
+    android:layout_width="352dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="34dp"
+    app:layout_constraintBottom_toTopOf="@+id/date"
+    app:layout_constraintEnd_toStartOf="@+id/date"
+    app:layout_constraintStart_toStartOf="@+id/date"
+    app:layout_constraintTop_toBottomOf="@+id/spinview" />
+
+<TextView
+    android:id="@+id/spinview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11dp"
+    android:layout_marginStart="16dp"
+    android:text="Select Your Doctor:"
+    android:textAlignment="center"
+    android:textSize="25sp"
+    app:layout_constraintBottom_toTopOf="@+id/spinner"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/MultilineText" />
+
+<TextView
+    android:id="@+id/DateView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginStart="16dp"
+    android:text="Select Date:"
+    android:textSize="25sp"
+    app:layout_constraintBottom_toBottomOf="@+id/date"
+    app:layout_constraintEnd_toStartOf="@+id/date"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/date" />
+
+<EditText
+    android:id="@+id/date"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    android:layout_marginEnd="16dp"
+    android:ems="10"
+    android:hint="Select Date"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toTopOf="@+id/time"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/DateView"
+    app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+<TextView
+    android:id="@+id/TimeView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginStart="16dp"
+    android:text="Select Time:"
+    android:textSize="25sp"
+    app:layout_constraintBottom_toBottomOf="@+id/time"
+    app:layout_constraintEnd_toStartOf="@+id/time"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/time" />
+
+<EditText
+    android:id="@+id/time"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="69dp"
+    android:layout_marginEnd="16dp"
+    android:ems="10"
+    android:hint="Select Time"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toTopOf="@+id/submit"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/TimeView"
+    app:layout_constraintTop_toBottomOf="@+id/date" />
+
+<Button
+    android:id="@+id/submit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="75dp"
+    android:onClick="onSubmit"
+    android:text="Submit"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/time" />
+
+</android.support.constraint.ConstraintLayout>
