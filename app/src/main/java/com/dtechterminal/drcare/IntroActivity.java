@@ -25,9 +25,9 @@ public class IntroActivity extends AppIntro {
         // Note here that we DO NOT use setContentView();
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance("Welcome to Dr.Care", "Choose a doctor and we do the rest.", R.mipmap.a, ContextCompat.getColor(getApplicationContext(),R.color.slide1)));
-        addSlide(AppIntroFragment.newInstance("Are you a Patient?", "Find the doctors in the easiest way possible.", R.mipmap.b, ContextCompat.getColor(getApplicationContext(),R.color.slide2)));
-        addSlide(AppIntroFragment.newInstance("Are you a Doctor?", "Find the patients near your locality without any hassle!", R.mipmap.a, ContextCompat.getColor(getApplicationContext(),R.color.slide3)));
+        addSlide(AppIntroFragment.newInstance("Welcome to Dr.Care", "Choose a doctor and we do the rest.", R.mipmap.a, ContextCompat.getColor(getApplicationContext(),R.color.colorAccent)));
+        addSlide(AppIntroFragment.newInstance("Are you a Patient?", "Find the doctors in the easiest way possible.", R.mipmap.b, ContextCompat.getColor(getApplicationContext(),R.color.colorAccent)));
+        addSlide(AppIntroFragment.newInstance("Are you a Doctor?", "Find the patients near your locality without any hassle!", R.mipmap.a, ContextCompat.getColor(getApplicationContext(),R.color.colorAccent)));
         showSkipButton(true);
         setProgressButtonEnabled(true);
         }

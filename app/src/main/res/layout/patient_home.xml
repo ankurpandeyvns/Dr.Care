@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a"
+    tools:context="com.dtechterminal.drcare.PatientHome">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Welcome To Dr.Care"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/appointment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/appointment"
+        android:layout_width="121dp"
+        android:layout_height="0dp"
+        android:onClick="appointment"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@mipmap/app"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="171dp"
+        android:layout_height="0dp"
+        android:onClick="ambulance"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:srcCompat="@mipmap/abmulance" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="appointment"
+        android:text="Get Appointment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/appointment"
+        app:layout_constraintTop_toBottomOf="@+id/appointment" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="ambulance"
+        android:text="Get Amulance"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="138dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:onClick="prescription"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:srcCompat="@mipmap/pre"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:onClick="prescription"
+        android:text="Get Prescription"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+</android.support.constraint.ConstraintLayout>

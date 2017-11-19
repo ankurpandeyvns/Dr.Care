@@ -1,6 +1,7 @@
 package com.dtechterminal.drcare;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -43,6 +45,15 @@ public class IntroPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_page);
+        final VideoView simpleVideoView = findViewById(R.id.videoView);
+        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.a));
+        simpleVideoView.start();
+        simpleVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                simpleVideoView.start();
+            }
+        });
         mAuth = FirebaseAuth.getInstance();
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -107,17 +118,16 @@ public class IntroPage extends AppCompatActivity {
             }
             public void showData(DataSnapshot dataSnapshot){
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
-                    if (FirebaseAuth.getInstance().getCurrentUser() != null)
-                        userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                     User uInfo = new User();
                     if(dataSnapshot.child(userID).child("uType").getValue().toString().equals("Doctor")) {
                         Toast.makeText(IntroPage.this, "Welcome " + dataSnapshot.child(userID).child("name").getValue().toString(),
                                 Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(IntroPage.this, Ambulance.class));
+                        startActivity(new Intent(IntroPage.this, DocProf.class));
                     }
                     else
                         if(dataSnapshot.child(userID).child("uType").getValue().toString().equals("Patient")) {
-                            startActivity(new Intent(IntroPage.this, GetAppointment.class));
+                            startActivity(new Intent(IntroPage.this, PatientHome.class));
                             Toast.makeText(IntroPage.this, "Welcome " + dataSnapshot.child(userID).child("name").getValue().toString(),
                                     Toast.LENGTH_SHORT).show();
                         }

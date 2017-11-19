@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dtechterminal.drcare.Prescription">
+    android:background="@drawable/a"
+    tools:context="com.dtechterminal.drcare.Prescription"
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="19dp"
         android:text="What We Treat"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/value"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
@@ -26,6 +28,7 @@
         android:layout_marginStart="16dp"
         android:text="Doctor"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -33,15 +36,13 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="66dp"
-        android:layout_marginTop="183dp"
         android:editable="false"
         android:text="Doctor Name"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/discription"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/docname"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toTopOf="parent"
         tools:editable="true" />
 
     <EditText
@@ -59,41 +60,41 @@
         android:id="@+id/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="38dp"
         android:editable="false"
         android:ems="9"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/docname"
-        app:layout_constraintEnd_toEndOf="@+id/et1"
-        app:layout_constraintStart_toEndOf="@+id/et1" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/discription"
         android:layout_width="193dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="87dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginStart="69dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="55dp"
         android:layout_weight="1"
-        android:hint="Enter Discription "
+        android:hint="Enter Description "
         android:inputType="textCapSentences|textMultiLine"
         android:maxLength="2000"
         android:maxLines="4"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="@+id/docname"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/docname" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
+        android:layout_marginStart="125dp"
+        android:background="@color/colorPrimary"
         android:text="Submit Details"
+        android:onClick="submitss"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discription" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

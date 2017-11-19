@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dr.Care</string>
+    <string name="title_activity_doctor_profile">DoctorProfile</string>
 </resources>

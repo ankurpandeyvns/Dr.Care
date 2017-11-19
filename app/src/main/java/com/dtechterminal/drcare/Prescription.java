@@ -1,9 +1,16 @@
 package com.dtechterminal.drcare;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import org.w3c.dom.Text;
 
@@ -27,6 +34,8 @@ public class Prescription extends AppCompatActivity {
         hm.put("Cardiologist","Dhruv Rana");
         //-----------------------------------//
         setContentView(R.layout.activity_prescription);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("abc");
         et1 =(EditText) findViewById(R.id.value);
@@ -38,5 +47,13 @@ public class Prescription extends AppCompatActivity {
             docname.setText(value);
             docname.setEnabled(false);
         }
+
+
+    }
+
+    void submitss(View view)
+    {
+        Toast.makeText(this, "Thank You!!!", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

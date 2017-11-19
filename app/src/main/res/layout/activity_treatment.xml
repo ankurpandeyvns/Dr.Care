@@ -4,19 +4,226 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dtechterminal.drcare.Treatment">
-
+    android:background="#E0E0E0"
+    tools:context="com.dtechterminal.drcare.Treatment"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="163dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="37dp"
-        android:fontFamily="sans-serif"
-        android:text="What We Treat"
-        android:textSize="20sp"
+        android:layout_width="352dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/arima_madurai_thin"
+        android:text="Your issue is related to?"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/generalmedicine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginStart="13dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/gynecology"
+        app:layout_constraintEnd_toStartOf="@+id/gynecology"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gynecology"
+        app:srcCompat="@mipmap/general_medicine" />
+
+    <ImageButton
+        android:id="@+id/gynecology"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginTop="48dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/sexology"
+        app:layout_constraintStart_toEndOf="@+id/generalmedicine"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@mipmap/gynaec" />
+
+    <ImageButton
+        android:id="@+id/sexology"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/gynecology"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gynecology"
+        app:layout_constraintTop_toTopOf="@+id/gynecology"
+        app:srcCompat="@mipmap/sexology" />
+
+    <ImageButton
+        android:id="@+id/psychiatry"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="15dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pregenancy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/psychiatry" />
+
+    <ImageButton
+        android:id="@+id/pregenancy"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="42dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dentistry"
+        app:layout_constraintStart_toEndOf="@+id/psychiatry"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/pregnancy" />
+
+    <ImageButton
+        android:id="@+id/dentistry"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="31dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pregenancy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/dermatology" />
+
+    <ImageButton
+        android:id="@+id/paediatrics"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/dermatologyst"
+        app:layout_constraintEnd_toStartOf="@+id/dermatologyst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dermatologyst"
+        app:srcCompat="@mipmap/paediatrics" />
+
+    <ImageButton
+        android:id="@+id/dermatologyst"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="128dp"
+        android:onClick="submit"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:srcCompat="@mipmap/dermatology" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="11dp"
+        android:text="General\nMedicine"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/psychiatry"
+        app:layout_constraintTop_toBottomOf="@+id/generalmedicine" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:text="Gynecology"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/pregenancy"
+        app:layout_constraintStart_toStartOf="@+id/gynecology" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Sexology"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/sexology"
+        app:layout_constraintTop_toBottomOf="@+id/sexology" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Psychiatry"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/paediatrics"
+        app:layout_constraintStart_toStartOf="@+id/paediatrics" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Pregenancy"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dermatologyst"
+        app:layout_constraintStart_toStartOf="@+id/pregenancy" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
+        android:text="Dentistry"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/dentistry"
+        app:layout_constraintTop_toBottomOf="@+id/dentistry" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Paediatrics"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="80dp"
+        android:text="Dermatologist"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/dermatologyst"
+        app:layout_constraintTop_toTopOf="@+id/dermatologyst" />
 </android.support.constraint.ConstraintLayout>

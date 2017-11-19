@@ -4,10 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#192E5B"
     tools:context="com.dtechterminal.drcare.IntroPage"
     tools:layout_editor_absoluteY="25dp">
 
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoView"
+        />
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signin"
         android:layout_width="195dp"

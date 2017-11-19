@@ -22,15 +22,21 @@
         </activity>
         <activity
             android:name=".IntroPage"
-            android:label="Intro Page" />
+            android:label="Intro Page"
+            android:noHistory="true"/>
         <activity android:name=".FirstLogin" />
         <activity android:name=".GetAppointment" />
-        <activity android:name=".Ambulance" />
-        <activity android:name=".Prescription"></activity>
+        <activity android:name=".Prescription" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".DocProf" />
+        <activity android:name=".Treatment" />
+        <activity android:name=".PatientHome"
+            android:noHistory="true"
+            />
     </application>
 
 </manifest>

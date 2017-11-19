@@ -48,8 +48,8 @@ public class FirstLogin extends AppCompatActivity {
             uInfo.setName(user.getDisplayName());
             uInfo.setEmail(user.getEmail());
             rootRef.child(user.getUid()).setValue(uInfo);
-            startActivity(new Intent(this,GetAppointment.class));
-        Toast.makeText(this, "Welcome "+user.getDisplayName(), Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this,DocProf.class));
+            Toast.makeText(this, "Welcome "+user.getDisplayName(), Toast.LENGTH_SHORT).show();
     }
      public void Patient(View view){
             DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
@@ -63,7 +63,7 @@ public class FirstLogin extends AppCompatActivity {
             uInfo.setName(user.getDisplayName());
             uInfo.setEmail(user.getEmail());
             rootRef.child(user.getUid()).setValue(uInfo);
-            startActivity(new Intent(this,Ambulance.class));
+            startActivity(new Intent(this,PatientHome.class));
             Toast.makeText(this, "Welcome "+user.getDisplayName(), Toast.LENGTH_SHORT).show();
         }
 }

@@ -2,6 +2,7 @@ package com.dtechterminal.drcare;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class GetAppointment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_appointment);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         addSpinnerItems();
         addDatepicker();
         addTimepicker();
@@ -30,7 +33,9 @@ public class GetAppointment extends AppCompatActivity {
 
     void onSubmit(View view)
     {
-        Toast.makeText(this, "SAVED", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Your Appointment is Booked", Toast.LENGTH_SHORT).show();
+//        startActivity(new Intent(this,Treatment.class));
+        finish();
     }
 
     void addTimepicker()
@@ -105,6 +110,7 @@ public class GetAppointment extends AppCompatActivity {
         list.add("Hematology");
         list.add("Geriatrics");
         list.add("Surgery");
+
         list.add("Unknown");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, list);
